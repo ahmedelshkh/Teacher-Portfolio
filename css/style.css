@@ -1,0 +1,168 @@
+/* Start Fonts */
+/* roboto-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v32-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/roboto-v32-latin-500.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/roboto-v32-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-900 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/roboto-v32-latin-900.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* End Fonts */
+/* start global rules */
+:root {
+    --color-main-blue: #2196f3;
+    --color-alt-blue: #1787e0;
+    --color-black: black;
+    --color-white: white;
+    --color-light-gray: #fafafa;
+    --color-gray: #ececec;
+    --color-shadow-black: rgb(0 0 0 / 50%);
+    --color-shadow-light-black: rgb(0 0 0 / 10%);
+    --transition: .3s;
+    --fs-14: .8em;
+    --fs-18: 1.1em;
+    --fs-20:1.2em;
+    --font-awesome: "Font Awesome 6 Free";
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.page {
+    background-color: #f1f5f9;
+    min-height: 100vh;
+}
+/* Small */
+@media(min-width: 767px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/*mediun*/
+@media(min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* larg */
+@media(min-width:1200px) {
+
+    .container {
+        width: 1170px;
+    }
+}
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+
+}
+/* end global rules */
+
+/* Start Header */
+header {
+    box-shadow: 0 0 10px var(--color-shadow-light-black);
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container .logo {
+    color: var(--color-main-blue);
+    font-size: var(--fs-20);
+    font-weight: 700;
+}
+header .container .links {
+    display: flex;
+}
+header .container .links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: var(--fs-18);
+    color: var(--color-black);
+    position: relative;
+    transition: var(--transition);
+    overflow: hidden;
+}
+header .container .links > li > a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-main-blue);
+    transition: var(--transition);
+    left: -100%;
+    bottom: 0;
+}
+header .container .links > li > a:hover {
+    background-color: var(--color-light-gray);
+    color: var(--color-main-blue);
+
+}
+header .container .links > li > a:hover::before {
+    left: 0;
+    
+}
+/* End Header */
