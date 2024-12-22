@@ -135,6 +135,7 @@ header .container .logo {
 }
 header .container .links {
     display: flex;
+    transition: .3s;
 }
 header .container .links a {
     display: flex;
@@ -165,6 +166,52 @@ header .container .links > li > a:hover {
 header .container .links > li > a:hover::before {
     left: 0;
     
+}
+.menu-clicked {
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-white);
+    z-index: 100;
+}
+header .toggle-menu {
+    width: 20px;
+    height: 30px;
+    position: relative;
+    display: none;
+}
+header .toggle-menu .line {
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-black);
+    margin: 6px;
+    transition: var(--transition);
+}
+.line-move {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    height: 1.5px;
+}
+.line12-rotate {
+    transform: rotate(45deg);
+    margin: 0;
+}
+.line3-rotate {
+    transform: rotate(-45deg);
+    margin: 0;
+}
+@media(max-width: 768px) {
+    header .container .links {
+        display: none;
+    }
+    header .toggle-menu {
+        display: block;
+    }
 }
 /* End Header */
 /* Start Hompe Widget */
@@ -205,6 +252,7 @@ header .container .links > li > a:hover::before {
     display: block;
     width: fit-content;
     font-size: var(--fs-20);
+    transition: .3s;
 }
 .home .info .contact-button:hover {
     background-color: var(--color-alt-blue);
@@ -218,8 +266,29 @@ header .container .links > li > a:hover::before {
     animation: around-radius infinite 4s linear;
     position: relative;
 }
+@media(max-width: 768px) {
+    .home .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .home .info {
+        width: 100%;
+        text-align: center;
+    }
+    .home .info h2 {
+        font-size: 30px;
+        max-width: 100%;
+    }
+    .home .info .contact-button {
+        margin: 20px auto 0 auto;
+    }
+    .home img {
+        margin-bottom: 15px;
+        height: 300px;
+    }
+}
 /* End Hompe Widget */
-
 /* Start Animation */
 @keyframes around-radius {
     0% {
