@@ -51,6 +51,7 @@
     --color-white: white;
     --color-light-gray: #fafafa;
     --color-gray: #ececec;
+    --color-dark-gray: #666;
     --color-shadow-black: rgb(0 0 0 / 50%);
     --color-shadow-light-black: rgb(0 0 0 / 10%);
     --transition: .3s;
@@ -166,3 +167,74 @@ header .container .links > li > a:hover::before {
     
 }
 /* End Header */
+/* Start Hompe Widget */
+.home .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: calc(100vh - 72px);
+}
+.home .info h2 {
+    margin: 0;
+    padding: 0;
+    text-wrap: wrap;
+    font-size: 50px;
+    max-width: 450px;
+}
+.home .info .title {
+    margin: 10px 0 5px 0;
+    padding: 0;
+    font-size: var(--fs-18);
+    color: var(--color-dark-gray);
+}
+.home .info p {
+    font-size: var(--fs-14);
+    color: var(--color-dark-gray);
+}
+.home .info i {
+    color: gold;
+    margin: auto 0;
+}
+.home .info .contact-button {
+    font-weight: bold;
+    margin-top: 46px;
+    background-color: var(--color-main-blue);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    display: block;
+    width: fit-content;
+    font-size: var(--fs-20);
+}
+.home .info .contact-button:hover {
+    background-color: var(--color-alt-blue);
+}
+.home img {
+    max-width: 100%;
+    max-height: 100%;
+    height: 500px;
+    border-radius: 22% 78% 57% 43% / 48% 67% 33% 52%;
+    border: 2px solid var(--color-black);
+    animation: around-radius infinite 4s linear;
+    position: relative;
+}
+/* End Hompe Widget */
+
+/* Start Animation */
+@keyframes around-radius {
+    0% {
+        border-radius: 22% 78% 57% 43% / 48% 67% 33% 52%;
+        top: 0;
+    }
+    50% {
+        border-radius: 75% 25% 84% 16% / 48% 87% 13% 52%;
+        top: -35px;
+    }
+    80% {
+        border-radius: 16% 84% 15% 85% / 69% 51% 49% 31%;
+    }
+    100% {
+        top: 0px;
+    }
+}
+/* End Animation */
