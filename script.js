@@ -45,13 +45,13 @@ menu.onclick = function() {
 
 // Create A Count Down For The Achivements Section
 let numsOfAchivements = document.querySelectorAll(".achivements .collections .num");
-
+let achivementsSec = document.querySelector("#achivements")
 
 function countDwon(value, element, duration = 2000) {
-    let increament = Math.ceil(value / (duration / 20));
+    let increament = value / (duration / 20);
     let i = 0
     let interval = setInterval(() => {
-        element.textContent = i;
+        element.textContent = Math.ceil(i);
         i += increament
         
         if (i >= value) {
@@ -62,6 +62,21 @@ function countDwon(value, element, duration = 2000) {
     }, 20);
 };
 
-countDwon(numsOfAchivements[0].textContent, numsOfAchivements[0]);
-countDwon(numsOfAchivements[1].textContent, numsOfAchivements[1]);
-countDwon(numsOfAchivements[2].textContent, numsOfAchivements[2]);
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            countDwon(numsOfAchivements[0].textContent, numsOfAchivements[0]);
+            countDwon(numsOfAchivements[1].textContent, numsOfAchivements[1]);
+            countDwon(numsOfAchivements[2].textContent, numsOfAchivements[2]);
+        }
+    });
+}, { threshold: 0.4 });
+
+
+
+observer.observe(achivementsSec);
+
+
+
+    
+
