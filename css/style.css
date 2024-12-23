@@ -58,6 +58,7 @@
     --fs-14: .8em;
     --fs-18: 1.1em;
     --fs-20:1.2em;
+    --fs-24: 1.5em;
     --font-awesome: "Font Awesome 6 Free";
 }
 
@@ -288,7 +289,98 @@ header .toggle-menu .line {
         height: 300px;
     }
 }
-/* End Hompe Widget */
+/* End Home Widget */
+/* Start Timeline Widget */
+.main-title {
+    font-size: var(--fs-24);
+    font-weight: bold;
+    padding: 20px 30px;
+    margin: 50px auto 50px auto;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-black);
+    width: fit-content;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    z-index: 1;
+}
+.main-title::before,
+.main-title::after {
+    content: "";
+    position: absolute;
+    top: calc(50%);
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-main-blue);
+    transition: var(--transition);
+    z-index: -1;
+}
+.main-title::before {
+    left: -40px;
+}
+.main-title::after {
+    right: -40px;
+}
+.main-title:hover::before {
+    left: 0;
+}
+.main-title:hover::after {
+    right: 0;
+}
+.main-title:hover::before,
+.main-title:hover::after {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+.main-title:hover {
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.timeline table {
+    width: 100%;
+    border-spacing: 0;
+}
+.timeline table td {
+    padding: 15px;
+    color: var(--color-black);
+}
+.timeline table thead td {
+    background-color: var(--color-gray);
+    font-weight: bold;
+    border-color: var(--color-gray);
+}
+.timeline table tbody td {
+    border-bottom: 1px solid var(--color-gray);
+    border-left: 1px solid var(--color-gray);
+}
+.timeline table tr {
+    display: table-row;
+}
+.timeline table tbody tr td:last-child {
+    border: 1px solid var(--color-gray);
+}
+.timeline table tbody td .blank {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-black);
+}
+.timeline table tbody tr:hover td {
+    background-color: var(--color-light-gray);
+}
+@media(max-width: 767px) {
+    .timeline .responsive-table {
+        overflow-x: auto;
+    }
+}
+/* End Timeline Widget */
 /* Start Animation */
 @keyframes around-radius {
     0% {
