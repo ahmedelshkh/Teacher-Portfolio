@@ -42,3 +42,26 @@ menu.onclick = function() {
     toggleLines[2].classList.remove("line3-rotate");
     click = true;
 }
+
+// Create A Count Down For The Achivements Section
+let numsOfAchivements = document.querySelectorAll(".achivements .collections .num");
+
+
+function countDwon(value, element, duration = 2000) {
+    let increament = Math.ceil(value / (duration / 20));
+    let i = 0
+    let interval = setInterval(() => {
+        element.textContent = i;
+        i += increament
+        
+        if (i >= value) {
+            console.log(value, i)
+            clearInterval(interval);
+            element.textContent = value;
+        }
+    }, 20);
+};
+
+countDwon(numsOfAchivements[0].textContent, numsOfAchivements[0]);
+countDwon(numsOfAchivements[1].textContent, numsOfAchivements[1]);
+countDwon(numsOfAchivements[2].textContent, numsOfAchivements[2]);
