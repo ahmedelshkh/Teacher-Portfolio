@@ -413,6 +413,15 @@ header .toggle-menu .line {
 .achivements .collections p {
     color: var(--color-dark-gray);
 }
+@media(max-width: 768px) {
+    .achivements .collections {
+        flex-direction: column;
+    }
+    .achivements .collections .line {
+        width: 100%;
+        height: 2px;
+    }
+}
 /* End Achivements Widget */
 /* Start Animation */
 @keyframes around-radius {
