@@ -52,6 +52,7 @@
     --color-light-gray: #fafafa;
     --color-gray: #ececec;
     --color-dark-gray: #666;
+    --color-cool-gray: #f1f5f9;
     --color-shadow-black: rgb(0 0 0 / 50%);
     --color-shadow-light-black: rgb(0 0 0 / 10%);
     --transition: .3s;
@@ -59,6 +60,8 @@
     --fs-18: 1.1em;
     --fs-20:1.2em;
     --fs-24: 1.5em;
+    --fs-32: 2em;
+    --fs-44: 3em;
     --font-awesome: "Font Awesome 6 Free";
 }
 
@@ -381,6 +384,36 @@ header .toggle-menu .line {
     }
 }
 /* End Timeline Widget */
+/* Start Achivements Widget */
+.achivements .collections {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: var(--color-white);
+    box-shadow: 0px 0px 12px 5px var(--color-shadow-light-black);
+    border-radius: 6px;
+    text-align: center;
+    margin: 0 auto;
+    gap: 20px;
+}
+.achivements .collections .line {
+    width: 2px;
+    border-radius: 2px;
+    background-color: var(--color-gray);
+}
+.achivements .collections i {
+    color: var(--color-main-blue);
+    font-size: var(--fs-32);
+}
+.achivements .collections .num {
+    font-size: var(--fs-44);
+    margin: 7px 0 3px 0;
+    color: var(--color-black);
+}
+.achivements .collections p {
+    color: var(--color-dark-gray);
+}
+/* End Achivements Widget */
 /* Start Animation */
 @keyframes around-radius {
     0% {
