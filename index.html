@@ -9,7 +9,7 @@
     <!-- Add Normalize Library -->
     <link rel="stylesheet" href="css/normalis.css">
     <!-- Add the css file -->
-    <link rel="stylesheet" href="css/style.css">
+    <noscript></noscript><link rel="stylesheet" href="css/style.css"></noscript>
 </head>
 <body>
     <!-- Start Header -->
@@ -21,7 +21,7 @@
                     <a href="#home">Home</a>
                 </li>
                 <li>
-                    <a href="#time-line">Time Line</a>
+                    <a href="#timeline">Time Line</a>
                 </li>
                 <li>
                     <a href="#achivements">Achivements</a>
@@ -53,12 +53,12 @@
                 <p><i class="fa-solid fa-star"></i> 15 Years Of Experince</p>
                 <a href="#contact" class="contact-button">Contact Me</a>
             </div>
-            <img src="images/teacher-one.webp" alt="English Techer Picture">
+            <img loading="lazy" src="images/teacher-one.webp" alt="English Techer Picture">
         </div>
     </div>
     <!-- End Home Widget -->
     <!-- Start TimeLine Widget-->
-    <div class="timeline">
+    <div class="timeline" id="timeline">
         <div class="main-title">
             TimeLine
         </div>
@@ -204,6 +204,40 @@
         </div>
     </div>
     <!-- End Achivements Widget -->
-    <script src="script.js"></script>
+    <!-- Start About me Widget -->
+    <div class="about" id="about">
+        <div class="main-title">about</div>
+        <div class="container">
+            <div class="image">
+                <img width="400px" height="477.71" loading="lazy" src = "images/teacher-three.webp" alt="Egyption English Teacher">
+            </div>
+            <div class="description">
+                <h3>I'm <span class="highlight">Mohamed</span></h3>
+                <p>an experienced English teacher based in <span>Egypt, Kafr
+                        Elshiekh</span>, with over 15 years of expertise in teaching
+                    and language development. Passionate about helping students achieve their goals, I strive to create engaging and
+                    effective learning experiences.</p>
+                    <div class="loc">
+                        <h5>You can find me in</h5>
+                        <span class="location">نمره 4, الحامول, كفر الشيخ <i class="fa-solid fa-location-dot"></i></span>
+                    </div>
+                    <h5>My Social Media is</h5>
+                <div class="social">
+                    <a href="https://www.facebook.com/mohamed.seddik.52">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/m.seddik2007/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About me Widget -->
+    <script async src="script.js"></script>
 </body>
 </html>

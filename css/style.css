@@ -423,6 +423,100 @@ header .toggle-menu .line {
     }
 }
 /* End Achivements Widget */
+/* Start About Me Section */
+.about .container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+.about .image img {
+    border-radius: 50px;
+}
+.about .description {
+    padding-top : 10px;
+}
+.about .description h3 {
+    font-size: var(--fs-32);
+    padding-top: 10px;
+}
+.about .description h3 .highlight {
+    text-decoration: underline;
+    color: var(--color-main-blue);
+}
+.about .description p {
+    margin-top: 10px;
+    font-size: var(--fs-20);
+    line-height: 1.5;
+    color:var(--color-dark-gray);
+    width: 350px;
+}
+.about .description .loc i {
+    font-size: var(--fs-18);
+}
+
+.about .description .loc .location {
+    margin-left: auto;
+    display: block;
+    width: fit-content;
+}
+.about .description h5 {
+    width: fit-content;
+    margin: 20px auto;
+    font-size: var(--fs-24);
+    color: var(--color-black);
+    position: relative;
+}
+.about .description h5::before,
+.about .description h5::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 2px;
+    background-color: var(--color-black);
+}
+.about .description h5::before {
+    left: -71px;
+}
+.about .description h5::after {
+    right: -71px;
+}
+.about .description .social {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.about .description .social i {
+    font-size: var(--fs-32);
+    padding: 10px;
+    border: 3px solid var(--color-black);
+    border-radius: 50%;
+    color: var(--color-black);
+    transition: var(--transition);
+}
+.about .description .social i:hover {
+    color: var(--color-main-blue);
+    font-size: var(--fs-44);
+}
+@media(max-width: 768px) {
+    .about .container {
+        text-align: center;
+        flex-direction: column;
+    }
+    .about .image img {
+        width: 250px;
+        height: auto;
+    }
+    .about .description p {
+        margin: 10px auto 0 auto;
+    }
+    .about .description .loc .location {
+        width: 100%;
+    }
+}
+/* End About Me Section */
 /* Start Animation */
 @keyframes around-radius {
     0% {
