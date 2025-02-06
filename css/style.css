@@ -45,8 +45,17 @@
 /* End Fonts */
 /* start global rules */
 :root {
-    --color-main-blue: #2196f3;
+    /* main color */
+    --color-main-blue: #4A90E2;
     --color-alt-blue: #1787e0;
+    /* Secondry Color */
+    --color-warm-orange: #FFA726;
+    /* Background & Neutral Colors */
+    --color-soft-white: #F8F9FA;
+    --color-light-beige: #F5E6CC;
+    /* (Buttons & Important Sections) */
+    --color-soft-green: #66BB6A;
+    /* other colors */
     --color-black: black;
     --color-white: white;
     --color-light-gray: #fafafa;
@@ -223,7 +232,7 @@ header .toggle-menu .line {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: calc(100vh - 72px);
+    height: calc(100vh - 60px);
 }
 .home .info h2 {
     margin: 0;
@@ -249,7 +258,7 @@ header .toggle-menu .line {
 .home .info .contact-button {
     font-weight: bold;
     margin-top: 46px;
-    background-color: var(--color-main-blue);
+    background-color: var(--color-soft-green);
     color: white;
     padding: 5px 10px;
     border-radius: 6px;
@@ -517,6 +526,94 @@ header .toggle-menu .line {
     }
 }
 /* End About Me Section */
+/* Start Contact Section */
+.contact .container{
+    display: flex;
+    justify-content: space-around;
+}
+.contact .info-box {
+    position: relative;
+}
+.contact .info-box .title {
+    font-size: var(--fs-44);
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color-main-blue)
+}
+@media(min-width: 767px) {
+    .contact .info-box .title {
+        margin-top: 80px;
+    }
+}
+.contact .info-box .location i {
+    color: var(--color-main-blue);
+    font-size: var(--fs-20);
+}
+.contact .info-box .social {
+    display: flex;
+    margin-top: 20px;
+}
+.contact .info-box .social i {
+    font-size: var(--fs-32);
+    margin-right: 30px;
+    color: var(--color-white);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: .3s;
+}
+.contact .info-box .social i:hover {
+    transform: scale(1.2);
+}
+.contact .info-box .social i.fa-whatsapp {
+    background-color: var(--color-soft-green);
+}
+.contact .info-box .social i.fa-facebook {
+    background-color: #1877F2;
+}
+.contact .info-box .social i.fa-instagram {
+    background-color: #c13584;
+}
+.contact .info-box .description {
+    font-size: var(--fs-20);
+    color: var(--color-dark-gray);
+    line-height: 1.5;
+    margin-bottom: 7px;
+    word-break: break-word;
+    max-width: 550px;
+}
+.contact .info-box .call-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    font-size: var(--fs-24);
+    font-weight: bold;
+    color: var(--color-white);
+    margin-top: 30px;
+    border-radius: 4px;
+    background-color: var(--color-soft-green);
+    border: 3px solid white;
+    outline: 3px solid var(--color-soft-green);
+}
+.contact .info-box .call-button:hover {
+    opacity: .8;
+}
+.contact .info-box .phone-call {
+    position: absolute;
+    right: 50px;
+    bottom: 100px;
+    animation: phone-call 1.5s infinite linear;
+}
+.contact .image img {
+    width: 500px;
+    height: auto;
+}
+/* End Contact Section */
 /* Start Animation */
 @keyframes around-radius {
     0% {
@@ -532,6 +629,17 @@ header .toggle-menu .line {
     }
     100% {
         top: 0px;
+    }
+}
+@keyframes phone-call {
+    0%,
+    100% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(20deg);
+        opacity: .6;
     }
 }
 /* End Animation */
