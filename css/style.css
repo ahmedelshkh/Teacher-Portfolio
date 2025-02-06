@@ -635,6 +635,18 @@ header .toggle-menu .line {
     height: auto;
 }
 /* End Contact Section */
+/* Start Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: var(--fs-14);
+    border-top: 1px solid var(--color-dark-gray);
+}
+/* End Footer */
 /* Start Animation */
 @keyframes around-radius {
     0% {
