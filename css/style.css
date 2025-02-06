@@ -134,6 +134,9 @@ html {
 /* Start Header */
 header {
     box-shadow: 0 0 10px var(--color-shadow-light-black);
+    background-color: var(--color-soft-white);
+    z-index: 1000;
+
 }
 header .container {
     display: flex;
@@ -228,6 +231,9 @@ header .toggle-menu .line {
 }
 /* End Header */
 /* Start Hompe Widget */
+.home {
+    background-color: var(--color-light-beige);
+}
 .home .container {
     display: flex;
     align-items: center;
@@ -260,10 +266,12 @@ header .toggle-menu .line {
     margin-top: 46px;
     background-color: var(--color-soft-green);
     color: white;
-    padding: 5px 10px;
+    width: 150px;
+    height: 40px;
     border-radius: 6px;
-    display: block;
-    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: var(--fs-20);
     transition: .3s;
 }
@@ -303,11 +311,14 @@ header .toggle-menu .line {
 }
 /* End Home Widget */
 /* Start Timeline Widget */
+.title-holder {
+    padding-top: 50px;
+}
 .main-title {
     font-size: var(--fs-24);
     font-weight: bold;
     padding: 20px 30px;
-    margin: 50px auto 50px auto;
+    margin: 0 auto 50px auto;
     color: var(--color-black);
     background-color: var(--color-white);
     border: 2px solid var(--color-black);
@@ -353,7 +364,9 @@ header .toggle-menu .line {
     color: var(--color-white);
     border-color: var(--color-white);
 }
-
+.timeline {
+    background-color: var(--color-soft-white);
+}
 .timeline table {
     width: 100%;
     border-spacing: 0;
@@ -394,6 +407,10 @@ header .toggle-menu .line {
 }
 /* End Timeline Widget */
 /* Start Achivements Widget */
+.achivements {
+    background-color: var(--color-soft-white);
+    padding-bottom: 50px;
+}
 .achivements .collections {
     display: flex;
     justify-content: space-around;
@@ -433,6 +450,9 @@ header .toggle-menu .line {
 }
 /* End Achivements Widget */
 /* Start About Me Section */
+.about {
+    background-color: var(--color-light-beige);
+}
 .about .container {
     display: flex;
     justify-content: space-around;
@@ -461,6 +481,7 @@ header .toggle-menu .line {
 }
 .about .description .loc i {
     font-size: var(--fs-18);
+    color: var(--color-main-blue);
 }
 
 .about .description .loc .location {
@@ -472,7 +493,7 @@ header .toggle-menu .line {
     width: fit-content;
     margin: 20px auto;
     font-size: var(--fs-24);
-    color: var(--color-black);
+    color: var(--color-main-blue);
     position: relative;
 }
 .about .description h5::before,
@@ -480,15 +501,18 @@ header .toggle-menu .line {
     content: "";
     position: absolute;
     top: 50%;
-    width: 60px;
-    height: 2px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
     background-color: var(--color-black);
+    animation: dot-an 1s infinite linear;
 }
 .about .description h5::before {
-    left: -71px;
+    left: -20px;
 }
 .about .description h5::after {
-    right: -71px;
+    right: -20px;
 }
 .about .description .social {
     margin-top: 10px;
@@ -496,18 +520,6 @@ header .toggle-menu .line {
     display: flex;
     justify-content: center;
     gap: 30px;
-}
-.about .description .social i {
-    font-size: var(--fs-32);
-    padding: 10px;
-    border: 3px solid var(--color-black);
-    border-radius: 50%;
-    color: var(--color-black);
-    transition: var(--transition);
-}
-.about .description .social i:hover {
-    color: var(--color-main-blue);
-    font-size: var(--fs-44);
 }
 @media(max-width: 768px) {
     .about .container {
@@ -527,6 +539,10 @@ header .toggle-menu .line {
 }
 /* End About Me Section */
 /* Start Contact Section */
+.contact {
+    background-color: var(--color-light-beige);
+    padding-bottom: 20px;
+}
 .contact .container{
     display: flex;
     justify-content: space-around;
@@ -574,7 +590,7 @@ header .toggle-menu .line {
     display: flex;
     margin-top: 20px;
 }
-.contact .info-box .social i {
+.social i {
     font-size: var(--fs-32);
     margin-right: 30px;
     color: var(--color-white);
@@ -586,16 +602,16 @@ header .toggle-menu .line {
     border-radius: 50%;
     transition: .3s;
 }
-.contact .info-box .social i:hover {
+.social i:hover {
     transform: scale(1.2);
 }
-.contact .info-box .social i.fa-whatsapp {
+.social i.fa-whatsapp {
     background-color: var(--color-soft-green);
 }
-.contact .info-box .social i.fa-facebook {
+.social i.fa-facebook {
     background-color: #1877F2;
 }
-.contact .info-box .social i.fa-instagram {
+.social i.fa-instagram {
     background-color: #c13584;
 }
 .contact .info-box .description {
@@ -641,7 +657,6 @@ footer {
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: 20px;
     font-weight: 500;
     font-size: var(--fs-14);
     border-top: 1px solid var(--color-dark-gray);
@@ -672,7 +687,16 @@ footer {
     }
     50% {
         transform: rotate(20deg);
-        opacity: .6;
+        opacity: .4;
+    }
+}
+@keyframes dot-an{
+    0%,
+    100% {
+        background-color: var(--color-main-blue);
+    }
+    50% {
+        background-color: var(--color-warm-orange);
     }
 }
 /* End Animation */
