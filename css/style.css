@@ -531,6 +531,27 @@ header .toggle-menu .line {
     display: flex;
     justify-content: space-around;
 }
+@media(max-width: 993px) {
+    .contact .container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .contact .info-box .title {
+        font-size: var(--fs-32) !important;
+    }
+    .contact .info-box .social {
+        justify-content: center;
+    }
+    .contact .info-box .call-button {
+        margin: 0 auto 0 auto;
+    }
+    .contact .phone-call {
+        display: none;
+    }
+    .contact .image img {
+        max-width: 100%;
+    }
+}
 .contact .info-box {
     position: relative;
 }
@@ -583,7 +604,7 @@ header .toggle-menu .line {
     line-height: 1.5;
     margin-bottom: 7px;
     word-break: break-word;
-    max-width: 550px;
+    max-width: fit-content;
 }
 .contact .info-box .call-button {
     display: flex;
