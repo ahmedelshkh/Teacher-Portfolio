@@ -174,6 +174,11 @@ header .container .links {
     transition: .3s;
 }
 /* Mode checkbox */
+header .container .links label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #mode-checkbox {
     -webkit-appearance: none;
     appearance: none;
@@ -321,6 +326,7 @@ header .toggle-menu .line {
     text-wrap: wrap;
     font-size: 50px;
     max-width: 450px;
+    color: var(--color-black);
 }
 .home .info .title {
     margin: 10px 0 5px 0;
@@ -394,9 +400,9 @@ header .toggle-menu .line {
     font-weight: bold;
     padding: 20px 30px;
     margin: 0 auto 50px auto;
-    color: var(--color-black);
-    background-color: var(--color-white);
-    border: 2px solid var(--color-black);
+    color: gray;
+    background-color: white;
+    border: 2px solid black;
     width: fit-content;
     position: relative;
     cursor: pointer;
@@ -436,7 +442,7 @@ header .toggle-menu .line {
     border-radius: 0;
 }
 .main-title:hover {
-    color: var(--color-white);
+    color: white;
     border-color: var(--color-white);
 }
 .timeline {
@@ -540,6 +546,7 @@ header .toggle-menu .line {
     padding-top : 10px;
 }
 .about .description h3 {
+    color: var(--color-black);
     font-size: var(--fs-32);
     padding-top: 10px;
 }
@@ -563,6 +570,7 @@ header .toggle-menu .line {
     margin-left: auto;
     display: block;
     width: fit-content;
+    color: var(--color-black);
 }
 .about .description h5 {
     width: fit-content;
@@ -668,7 +676,7 @@ header .toggle-menu .line {
 .social i {
     font-size: var(--fs-32);
     margin-right: 30px;
-    color: var(--color-white);
+    color: white;
     width: 50px;
     height: 50px;
     display: flex;
@@ -697,6 +705,9 @@ header .toggle-menu .line {
     word-break: break-word;
     max-width: fit-content;
 }
+.contact .info-box .location {
+    color: var(--color-black);
+}
 .contact .info-box .call-button {
     display: flex;
     align-items: center;
@@ -705,7 +716,7 @@ header .toggle-menu .line {
     height: 50px;
     font-size: var(--fs-24);
     font-weight: bold;
-    color: var(--color-white);
+    color: white;
     margin-top: 30px;
     border-radius: 4px;
     background-color: var(--color-soft-green);
