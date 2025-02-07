@@ -1,3 +1,24 @@
+// Dark Mode
+let darkMode = localStorage.getItem("darkMode");
+let modeCheckbox = document.getElementById("mode-checkbox");
+
+if(darkMode) {
+    document.body.classList.add("dark-mode");
+    modeCheckbox.checked = true;
+};
+
+modeCheckbox.onchange = function() {
+    if(this.checked == true) {
+    document.body.classList.add("dark-mode");
+    localStorage.setItem("darkMode", true);
+    }else {
+    document.body.classList.remove("dark-mode");
+    localStorage.removeItem("darkMode");
+    };
+    
+};
+
+
 // On Click On the Toggle Menu
 let toggleMenu = document.querySelector(".toggle-menu");
 let menu = document.querySelector("header .links");

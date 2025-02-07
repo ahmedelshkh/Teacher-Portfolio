@@ -73,7 +73,26 @@
     --fs-44: 3em;
     --font-awesome: "Font Awesome 6 Free";
 }
-
+.dark-mode {
+    --color-main-blue: #6EA8FE;  /* Lighter Blue */
+    --color-alt-blue: #4A90E2;  /* Keep contrast */
+    /* Secondary Color */
+    --color-warm-orange: #FF8C42;  /* Deep Orange */
+    /* Background & Neutral Colors */
+    --color-soft-white: #1E1E1E;  /* Dark background */
+    --color-light-beige: #2A2A2A;  /* Darker beige */
+    /* (Buttons & Important Sections) */
+    --color-soft-green: #57A773;  /* Teal Green */
+    /* Other Colors */
+    --color-black: #E0E0E0;
+    --color-white: #121212;
+    --color-light-gray: #2E2E2E;
+    --color-gray: #3A3A3A;
+    --color-dark-gray: #999;
+    --color-cool-gray: #242A30;
+    --color-shadow-black: rgb(0 0 0 / 70%);
+    --color-shadow-light-black: rgb(255 255 255 / 10%);
+}
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -88,6 +107,7 @@ a {
 }
 
 body {
+    transition: .3s;
     font-family: Roboto, sans-serif;
 }
 ul {
@@ -152,6 +172,61 @@ header .container .logo {
 header .container .links {
     display: flex;
     transition: .3s;
+}
+/* Mode checkbox */
+#mode-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+}
+.mode-switch {
+    position: relative;
+    width: 70px;
+    height: 35px;
+    background-color: var(--color-warm-orange);
+    border-radius: 20px;
+    transition: .4s;
+    cursor: pointer;
+}
+.mode-switch::before,
+.mode-switch::after {
+    font-family: var(--font-awesome);
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-18);
+    width: 25px;
+    height: 25px;
+    transition: .4s;
+}
+.mode-switch::before {
+    content: '\f185';
+    border-radius: 50%;
+    left: 4px;
+    background-color: white;
+    color: var(--color-warm-orange);
+}
+.mode-switch::after {
+    content: '\f186';
+    border-radius: 50%;
+    right: 4px;
+    color: gray;
+}
+#mode-checkbox:checked + .mode-switch {
+    background-color: rgb(51 65 85);
+}
+#mode-checkbox:checked + .mode-switch::before {
+    color: gray;
+    background-color: transparent;
+    left: 41px;
+}
+#mode-checkbox:checked+.mode-switch::after {
+    color: rgb(51 65 85);
+    background-color: white;
+    left: 4px;
 }
 header .container .links a {
     display: flex;
