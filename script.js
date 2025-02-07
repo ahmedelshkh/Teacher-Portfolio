@@ -78,7 +78,7 @@ function countDwon(value, element, duration = 2000) {
         if (i >= value) {
             console.log(value, i)
             clearInterval(interval);
-            element.textContent = value;
+            element.textContent = `${value}+`;
         }
     }, 20);
 };
@@ -91,6 +91,7 @@ const observer = new IntersectionObserver((entries) => {
             countDwon(numsOfAchivements[2].textContent, numsOfAchivements[2]);
         }
     });
+    observer.disconnect();
 }, { threshold: 0.4 });
 
 
@@ -99,5 +100,27 @@ observer.observe(achivementsSec);
 
 
 
-    
+// // Comming Soon Sections
+// coomingSoon = document.querySelector(".coming-soon");
 
+// coomingSoon.onclick = function() {
+//     popUpHolder = document.createElement("div");
+//     popUpBody = document.createElement("div");
+//     popUpText = document.createElement("p");
+//     popUpText.textContent = "Commin Soon!"
+    
+//     popUpHolder.append(popUpBody);
+//     popUpBody.append(popUpText);
+
+//     popUpHolder.style.cssText = "position: absolute; left: 0; top: 0; display: flex; align-items: center; justify-content: center;  height: 100vh; width: 100%; background-color: rgb(0,0,0/ 10%); ;"
+//     popUpBody.style.cssText = "background-color: orange; display: flex; align-items: center; justify-content: center; padding: 20px; border-radius: 6px;";
+//     popUpText.style.cssText = "color: white; font-weight: bold; font-size: 20px;"
+
+//     document.body.style.position = "relative"
+//     document.body.append(popUpHolder);
+//     clearPopUP = window.setTimeout(1000, function() {
+//         console.log("done");
+//         document.body.removeChild(popUpHolder);
+//     });
+//     clearPopUP;
+// };
